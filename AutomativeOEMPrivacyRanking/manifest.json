@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Automotive OEM Privacy Ranking",
+  "version": "1.0.0",
+  "description": "View and track automotive OEM privacy statement rankings with historical data.",
+  "permissions": [
+    "storage"
+  ],
+  "action": {
+    "default_title": "Automotive OEM Privacy Ranking",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  }
+}

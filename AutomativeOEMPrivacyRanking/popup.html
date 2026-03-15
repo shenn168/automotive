@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automotive OEM Privacy Ranking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>🚗 OEM Privacy Ranking</h1>
+            <div class="header-controls">
+                <button id="viewBtn" class="btn btn-primary active">
+                    📊 Current
+                </button>
+                <button id="historyBtn" class="btn btn-secondary">
+                    📜 History
+                </button>
+                <button id="exportBtn" class="btn btn-secondary">
+                    💾 Export
+                </button>
+            </div>
+        </header>
+
+        <!-- Current Rankings View -->
+        <section id="currentView" class="view active">
+            <div class="ranking-info">
+                <p id="assessmentDate" class="assessment-date">Loading...</p>
+            </div>
+
+            <div class="filters">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    class="search-box" 
+                    placeholder="Search OEM..."
+                >
+                <select id="countryFilter" class="filter-select">
+                    <option value="">All Countries</option>
+                </select>
+                <select id="ratingFilter" class="filter-select">
+                    <option value="">All Ratings</option>
+                    <option value="5">⭐⭐⭐⭐⭐</option>
+                    <option value="4">⭐⭐⭐⭐</option>
+                    <option value="3">⭐⭐⭐</option>
+                    <option value="2">⭐⭐</option>
+                    <option value="1">⭐</option>
+                </select>
+            </div>
+
+            <div id="rankingsList" class="rankings-list">
+                <div class="loading-message">Loading rankings...</div>
+            </div>
+        </section>
+
+        <!-- Historical View -->
+        <section id="historyView" class="view">
+            <div id="historyTimeline" class="history-timeline">
+                <div class="loading-message">Loading history...</div>
+            </div>
+        </section>
+
+        <!-- Toast Notification -->
+        <div id="toast" class="toast"></div>
+    </div>
+
+    <!-- Load scripts in correct order -->
+    <script src="data.js"></script>
+    <script src="storage.js"></script>
+    <script src="popup.js"></script>
+</body>
+</html>
